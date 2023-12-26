@@ -8,7 +8,7 @@
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Hannes Mann");
-MODULE_DESCRIPTION("Filter kernel module to set the polling rate of the Wii U/Mayflash GameCube Adapter to a custom value.");
+MODULE_DESCRIPTION("Filter kernel module to set the polling rate of the ACRUX USB GamePad to a custom value.");
 MODULE_VERSION("1.4");
 
 static struct usb_device* adapter_device = NULL;
