@@ -1,0 +1,6 @@
+#!/bin/bash
+curl -s https://api.github.com/repos/project-slippi/slippi-launcher/releases/latest | \
+   	jq -r ".assets[] | select(.name | test(\"Slippi-Launcher-2.11.1-x86_64.AppImage\")) | .browser_download_url" | \
+	xargs wget -O slippi.AppImage
+
+chmod +x slippi.AppImage

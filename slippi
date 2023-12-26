@@ -1,0 +1,27 @@
+#!/bin/bash
+
+GC_ADAPTER_OC_MODULE="gcadapter_oc"
+
+# START setup upgraded gc adapter polling performance
+# Check if the module is loaded
+if lsmod | grep -q "^$GC_ADAPTER_OC_MODULE "; then
+    echo "The $GC_ADAPTER_OC_MODULE module is already loaded."
+else
+    echo "The $GC_ADAPTER_OC_MODULE module is not loaded."
+    echo "Building $GC_ADAPTER_OC_MODULE"
+	# if not loaded, build it and load
+    GC_ADAPTER_OC_BUILD_PATH=~/grams/gcadapter-oc-kmod
+    cd $GC_ADAPTER_OC_BUILD_PATH
+    make clean
+    make
+    echo "Loading $GC_ADAPTER_OC_MODULE"
+    sudo insmod "$GC_ADAPTER_OC_MODULE.ko"
+fi
+# END setup upgraded gc adapter polling performance
+
+# RUN SLIPPI
+SLIPPI=slippi.AppImage
+SLIPPI_PATH=~/grams/slippi
+SLIPPI_CMD=$SLIPPI_PATH/$SLIPPI
+
+"$SLIPPI_CMD"
