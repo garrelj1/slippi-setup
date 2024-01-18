@@ -40,3 +40,6 @@ Polling rate is set according to the `bInterval` value in the USB endpoint descr
 
 You can change the rate by using the kernel parameter `gcadapter_oc.rate=n` (if installed), passing the rate to `insmod gcadapter_oc.ko rate=n` or going into `/sys/module/gcadapter_oc/parameters` and using `echo n > rate` to change the value ([video](https://asciinema.org/a/455373)).
 
+## Other helpful links
+- [UnclePunch mod pack](https://github.com/UnclePunch/Training-Mode/tree/master) for training tech
+- [20XX Hack Pack](https://github.com/DRGN-DRC/20XX-HACK-PACK)
