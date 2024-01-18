@@ -6,3 +6,5 @@ slippi.AppImage
 *.ko
 *.mod*
 *.cmd*
+Module.symvers
+modules.order
