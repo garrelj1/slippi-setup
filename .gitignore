@@ -1,2 +1,8 @@
 images
 slippi.AppImage
+
+# build files
+*.o
+*.ko
+*.mod*
+*.cmd*
