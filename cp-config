@@ -1,0 +1,12 @@
+#!/bin/bash
+
+export STD_CONFIG_PATH=~/.config/SlippiOnline/Config/Profiles/GCPad
+
+if [ -d $STD_CONFIG_PATH ]; then
+    echo "Copying controller config to $STD_CONFIG_PATH"
+	cp ctl-default.ini $STD_CONFIG_PATH
+	exit 0
+else
+    echo "Directory $STD_CONFIG_PATH does not exist. EXITING"
+	exit 1
+fi
